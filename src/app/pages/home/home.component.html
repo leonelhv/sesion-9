@@ -1,0 +1,30 @@
+<div class="w-full flex flex-col justify-center items-center">
+  <div class="p-4 flex flex-col items-center gap-2">
+    <div class="flex gap-2">
+      <input
+        type="checkbox"
+        id="checkActive"
+        [checked]="activeCheck"
+        (click)="onCheckActive()"
+      />
+      <label for="checkActive">Is active</label>
+    </div>
+    <p *ngIf="!activeCheck">Activa el checkbox para mostrar el contenido</p>
+  </div>
+  <div class="w-64 p-4" *ngIf="activeCheck">
+    <div class="bg-gray-600">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+        alt=""
+      />
+    </div>
+    <div class="border p-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nulla
+        maxime a voluptatum voluptatibus pariatur, fugiat dolore fuga ab
+        exercitationem, debitis beatae nihil voluptate nesciunt sequi facere
+        eligendi in corporis.
+      </p>
+    </div>
+  </div>
+</div>
